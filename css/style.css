@@ -8,25 +8,35 @@
   display: grid;
   grid-template-rows: 100px 1fr 50px;
   grid-template-columns: 2fr 8fr;
+  grid-gap: 10px;
+  grid-template-areas:
+  "header header"
+  "sidebar body"
+  "footer footer";
 }
 
 .header {
   background-color: #ccc;
   border: 1px solid #999;
-  grid-column: 1 / span 2;
+  grid-area: header;
+  max-width: 20em;
+
 }
 .sidebar {
   background-color: #cedb47;
   border: 1px solid #fff;
+  grid-area: sidebar;
+
 }
 
 .body {
   background-color: #d13737;
   border: 1px solid #fff;
+  grid-area: body;
 }
 
 .footer {
   background-color: #ccc;
   border: 1px solid #555;
-  grid-column: 1 / span 2;
+  grid-area: footer;
 }
